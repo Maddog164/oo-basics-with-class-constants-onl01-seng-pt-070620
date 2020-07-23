@@ -8,18 +8,18 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    i = 0
+    #i = 0
     binding.pry
-    while BRANDS.length < i do
-      if brand == BRANDS[i]
-        trigger = "dontadd"
-        i = BRANDS.length
-      end
-      i += 1
-    end
-    if trigger != "dontadd"
-      BRANDS << brand
-    end
+    #while BRANDS.length < i do
+    #  if brand == BRANDS[i]
+    #    trigger = "dontadd"
+    #    i = BRANDS.length
+    #  end
+    #  i += 1
+    #end
+    #if trigger != "dontadd"
+    BRANDS << brand unless BRANDS.include?(brand)
+    #end
   end
 
   def cobble
